@@ -2096,4 +2096,4 @@ export const questions: Question[] = [
   },
 ];
 
-export const sections = [...new Set(questions.map((q) => q.section))];
+export const sections = questions.map((q) => q.section).filter((v, i, a) => a.indexOf(v) === i);
